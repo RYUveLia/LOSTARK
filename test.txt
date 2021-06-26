@@ -1,0 +1,53 @@
+request%5BfirstCategory%5D=200000&request%5BsecondCategory%5D=0&request%5BclassNo%5D=402&request%5BitemTier%5D=3&request%5BitemGrade%5D=5&request%5BitemLevelMin%5D=0&request%5BitemLevelMax%5D=1500&request%5BitemName%5D=&request%5BgradeQuality%5D=&request%5BskillOptionList%5D%5B0%5D%5BfirstOption%5D=&request%5BskillOptionList%5D%5B0%5D%5BsecondOption%5D=&request%5BskillOptionList%5D%5B0%5D%5BminValue%5D=&request%5BskillOptionList%5D%5B0%5D%5BmaxValue%5D=&request%5BskillOptionList%5D%5B1%5D%5BfirstOption%5D=&request%5BskillOptionList%5D%5B1%5D%5BsecondOption%5D=&request%5BskillOptionList%5D%5B1%5D%5BminValue%5D=&request%5BskillOptionList%5D%5B1%5D%5BmaxValue%5D=&request%5BskillOptionList%5D%5B2%5D%5BfirstOption%5D=&request%5BskillOptionList%5D%5B2%5D%5BsecondOption%5D=&request%5BskillOptionList%5D%5B2%5D%5BminValue%5D=&request%5BskillOptionList%5D%5B2%5D%5BmaxValue%5D=&request%5BetcOptionList%5D%5B0%5D%5BfirstOption%5D=2&request%5BetcOptionList%5D%5B0%5D%5BsecondOption%5D=16&request%5BetcOptionList%5D%5B0%5D%5BminValue%5D=&request%5BetcOptionList%5D%5B0%5D%5BmaxValue%5D=&request%5BetcOptionList%5D%5B1%5D%5BfirstOption%5D=3&request%5BetcOptionList%5D%5B1%5D%5BsecondOption%5D=278&request%5BetcOptionList%5D%5B1%5D%5BminValue%5D=3&request%5BetcOptionList%5D%5B1%5D%5BmaxValue%5D=3&request%5BetcOptionList%5D%5B2%5D%5BfirstOption%5D=3&request%5BetcOptionList%5D%5B2%5D%5BsecondOption%5D=249&request%5BetcOptionList%5D%5B2%5D%5BminValue%5D=5&request%5BetcOptionList%5D%5B2%5D%5BmaxValue%5D=5&request%5BetcOptionList%5D%5B3%5D%5BfirstOption%5D=&request%5BetcOptionList%5D%5B3%5D%5BsecondOption%5D=&request%5BetcOptionList%5D%5B3%5D%5BminValue%5D=&request%5BetcOptionList%5D%5B3%5D%5BmaxValue%5D=&request%5BpageNo%5D=1&tooltipData=
+
+request%5BfirstCategory%5D=200000&
+request%5BsecondCategory%5D=0&
+// calssNo = 전직번호
+request%5BclassNo%5D=402&
+// itemTier
+request%5BitemTier%5D=3&
+// 아이템등급(5=유물)
+request%5BitemGrade%5D=5&
+request%5BitemLevelMin%5D=0&
+request%5BitemLevelMax%5D=1500&
+request%5BitemName%5D=&
+request%5BgradeQuality%5D=&
+request%5BskillOptionList%5D%5B0%5D%5BfirstOption%5D=&
+request%5BskillOptionList%5D%5B0%5D%5BsecondOption%5D=&
+request%5BskillOptionList%5D%5B0%5D%5BminValue%5D=&
+request%5BskillOptionList%5D%5B0%5D%5BmaxValue%5D=&
+request%5BskillOptionList%5D%5B1%5D%5BfirstOption%5D=&
+request%5BskillOptionList%5D%5B1%5D%5BsecondOption%5D=&
+request%5BskillOptionList%5D%5B1%5D%5BminValue%5D=&
+request%5BskillOptionList%5D%5B1%5D%5BmaxValue%5D=&
+request%5BskillOptionList%5D%5B2%5D%5BfirstOption%5D=&
+request%5BskillOptionList%5D%5B2%5D%5BsecondOption%5D=&
+request%5BskillOptionList%5D%5B2%5D%5BminValue%5D=&
+request%5BskillOptionList%5D%5B2%5D%5BmaxValue%5D=&
+// etcOptionList[0][firstoption] = 2, 특성
+request%5BetcOptionList%5D%5B0%5D%5BfirstOption%5D=2&
+// 16 = 특화, 18 = 신속, 15 = 치명
+request%5BetcOptionList%5D%5B0%5D%5BsecondOption%5D=16&
+request%5BetcOptionList%5D%5B0%5D%5BminValue%5D=&
+request%5BetcOptionList%5D%5B0%5D%5BmaxValue%5D=&
+// [1][firstoption] = 3, 각인
+request%5BetcOptionList%5D%5B1%5D%5BfirstOption%5D=3&
+// 278 = 잔재
+request%5BetcOptionList%5D%5B1%5D%5BsecondOption%5D=278&
+// 최소
+request%5BetcOptionList%5D%5B1%5D%5BminValue%5D=3&
+// 최대
+request%5BetcOptionList%5D%5B1%5D%5BmaxValue%5D=3&
+request%5BetcOptionList%5D%5B2%5D%5BfirstOption%5D=3&
+// 249 = 기습
+request%5BetcOptionList%5D%5B2%5D%5BsecondOption%5D=249&
+request%5BetcOptionList%5D%5B2%5D%5BminValue%5D=5&
+request%5BetcOptionList%5D%5B2%5D%5BmaxValue%5D=5&
+request%5BetcOptionList%5D%5B3%5D%5BfirstOption%5D=&
+request%5BetcOptionList%5D%5B3%5D%5BsecondOption%5D=&
+request%5BetcOptionList%5D%5B3%5D%5BminValue%5D=&
+request%5BetcOptionList%5D%5B3%5D%5BmaxValue%5D=&
+request%5BpageNo%5D=1&
+tooltipData=
+
+// 잔재 기습 원한 슈차 바리 돌대 저받 안상 부뼈 예둔 정흡 
