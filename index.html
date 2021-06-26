@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nav bar</title>
+</head>
+
+<body>
+    <form id="form">
+        {% for i in range(6) %}
+        {% if loop.index == 1 %}
+        <label for="{{ item_name }}"> 목걸이 </label>
+        {% elif loop.index <= 4 and loop.index > 2 %}
+        <label for="{{ item_name }}"> 귀걸이 </label>
+        {% elif loop.index > 4 %}
+        <label for="{{ item_name }}"> 반지 </label>
+        {% endif %}
+        {% for (item_name, item_body) in acc_data.items() %}
+        <select name="{{ item_name }}" id="{{ item_name }}">
+            <option value="{{ item_body['head'] }}">{{ item_body['head'] }}</option>
+            {% for category in item_body['body'] %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        {% endfor %}
+        {% if loop.index > 1 %}
+        <br>
+        {% endif %}
+        {% endfor %}
+
+        <br>
+
+        {% for (item_name, item_body) in stone_data.items() %}
+        <select name="{{ item_name }}{{ (loop.index + 1) // 2}}" id="{{ item_name }}{{ (loop.index + 1) // 2 }}">
+            <option value="{{ item_body['head'] }}">{{ item_body['head'] }}</option>
+            {% for category in item_body['body'] %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        {% if loop.index % 2 == 0 %}
+        <br />
+        {% endif %}
+        {% endfor %}
+
+        <br>
+
+        {% for i in range(2) %}
+        {% set outer_loop = loop %}
+        {% for (item_name, item_body) in ring_data.items() %}
+        <select name="{{ item_name }}{{ outer_loop.index }}" id="{{ item_name }}{{ outer_loop.index }}">
+            <option value="{{ item_body['head'] }}">{{ item_body['head'] }}</option>
+            {% for category in item_body['body'] %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        {% endfor %}
+        <br>
+        {% endfor %}
+        <br>
+
+        {% for i in range(5) %}
+        {% set outer_loop = loop %}
+        {% for (item_name, item_body) in object_data.items() %}
+        <select name="{{ item_name }}{{ outer_loop.index }}" id="{{ item_name }}{{ outer_loop.index }}">
+            <option value="{{ item_body['head'] }}">{{ item_body['head'] }}</option>
+            {% for category in item_body['body'] %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+        {% endfor %}
+        {% endfor %}
+        <br>
+
+        <button type="submit" id="submit">Send</button>
+    </form>
+
+    <ul id='messages'>
+    </ul>
+    <script src="/static/index.js"></script>
+
+</body>
+
+</html>

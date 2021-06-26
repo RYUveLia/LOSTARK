@@ -57,15 +57,46 @@ def ImprintCombination(step: int, presentImprint: dict, purchased: list):
                         newImprint[imp2] = newImprint[imp2] - i
             newImprint[imp1] = newImprint[imp1] - 3
 
-def main():
+def init(data):
     purchased = []
     presentImprint = {}
 
-    presentImprint["잔재된기운"] = 12
-    presentImprint["저주받은인형"] = 9
-    presentImprint["기습의대가"] = 7
-    presentImprint["슈퍼차지"] = 7
-    presentImprint["원한"] = 0
+    i = 0
+    new_key = ""
+    for (key, value) in data.items():
+        if i == 0:
+            i += 1
+            continue
+        if "감소" in key:
+            continue
+
+        if "목표" in key:
+            if value not in presentImprint:
+                presentImprint[value] = 0
+            continue
+
+        if i % 2 == 1:
+            new_key = value
+        else:
+            if new_key in presentImprint:
+                new_value = value
+                if new_value.isdigit() == False:
+                    new_value = 0
+                presentImprint[new_key] = presentImprint[new_key] + int(new_value)
+            else:
+                if value.isdigit() == False:
+                    presentImprint[new_key] = 0
+                else:    
+                    presentImprint[new_key] = int(value)
+        i += 1
+
+    #print(presentImprint)
+
+    # presentImprint["잔재된기운"] = 12
+    # presentImprint["저주받은인형"] = 9
+    # presentImprint["기습의대가"] = 7
+    # presentImprint["슈퍼차지"] = 7
+    # presentImprint["원한"] = 0
 
     ImprintCombination(0, presentImprint, purchased)
 
@@ -76,6 +107,3 @@ def main():
             for item in k:
                 print(item, end=" ")
         print()
-
-if __name__ == "__main__":
-	main()
