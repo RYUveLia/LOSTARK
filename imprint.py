@@ -60,14 +60,29 @@ def ImprintCombination(step: int, presentImprint: dict, purchased: list):
 def init(data):
     purchased = []
     presentImprint = {}
+    penaltyImprint = {}
+    
+    # 목 / 귀 / 귀 / 반 / 반
+    ability = []
 
     i = 0
+    penaltyFlag = 0
+    penaltyKey = ""
     new_key = ""
     for (key, value) in data.items():
         if i == 0:
+            for j in range(6):
+                ability.append(value[j])
             i += 1
             continue
+
         if "감소" in key:
+            if penaltyFlag == 0:
+                penaltyFlag = 1
+                penaltyKey = value
+            else:
+                penaltyFlag = 0
+                penaltyImprint[penaltyKey] = value
             continue
 
         if "목표" in key:
@@ -91,6 +106,7 @@ def init(data):
         i += 1
 
     #print(presentImprint)
+    print(penaltyImprint)
 
     # presentImprint["잔재된기운"] = 12
     # presentImprint["저주받은인형"] = 9
